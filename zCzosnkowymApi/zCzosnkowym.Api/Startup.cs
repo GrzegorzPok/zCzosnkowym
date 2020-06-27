@@ -38,7 +38,9 @@ namespace zCzosnkowym.Api
             services.AddTransient<IOrderRepository, OrderRepository>();
 
             services.AddDbContext<OrderFoodContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("zCzosnkowym")));
+                    options.UseSqlite(Configuration.GetConnectionString("zCzosnkowym-sqlLite")));
+
+                    
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
