@@ -2,17 +2,19 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using zCzosnkowym.Core;
+using zCzosnkowym.DataAccess.Entities;
 
 namespace zCzosnkowym.DataAccess.Context
 {
-    public class FoodOrderContext : DbContext
+    public class OrderFoodContext : DbContext
     {
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Person> Persons { get; set; }
+        public DbSet<OrderElement> OrderElements { get; set; }
 
-        public FoodOrderContext(DbContextOptions<FoodOrderContext> options) : base(options)
+
+        public OrderFoodContext(DbContextOptions<OrderFoodContext> options) : base(options)
         {
 
         }

@@ -12,24 +12,25 @@ namespace zCzosnkowym.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RestaurantsController : ControllerBase
+    public class OrdersController : ControllerBase
     {
+
         private readonly IRestaurantRepository _repository;
         private readonly IMapper _mapper;
 
-        public RestaurantsController(IRestaurantRepository repository, IMapper mapper)
+        public OrdersController(IRestaurantRepository repository, IMapper mapper)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<RestaurantDto>>> Get()
+        public async Task<ActionResult<IEnumerable<OrderDto>>> Get()
         {
             try
             {
-                var restaurantsFromRepo = await _repository.GetAll();
-                return Ok(_mapper.Map<IEnumerable<RestaurantDto>>(restaurantsFromRepo));
+                var ordersFromRepo = await _repository.GetAll();
+                return Ok(_mapper.Map<IEnumerable<OrderDto>>(ordersFromRepo));
             }
             catch (Exception)
             {

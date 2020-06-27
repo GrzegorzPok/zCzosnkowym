@@ -75,7 +75,7 @@ namespace zCzosnkowym.Core.Tests
             Assert.Equal(requestParams.OrderOwner.FirstName + " " + requestParams.OrderOwner.LastName, newOrder.PurchaserName);
             Assert.Equal(requestParams.OrderOwner.BankAccount, newOrder.PurchaserAccountNumber);
             Assert.Equal(requestParams.Restaurant, newOrder.Restaurant);
-            Assert.Equal(OrderState.New, newOrder.State);
+            Assert.Equal(1, newOrder.State);
         }
 
         [Fact]

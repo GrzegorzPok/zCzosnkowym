@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\zCzosnkowym.Core\zCzosnkowym.Core.csproj" />
     <ProjectReference Include="..\zCzosnkowym.DataAccess\zCzosnkowym.DataAccess.csproj" />
   </ItemGroup>
 

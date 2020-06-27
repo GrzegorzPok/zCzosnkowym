@@ -11,8 +11,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-using zCzosnkowym.Core.Interfaces;
 using zCzosnkowym.DataAccess;
+using zCzosnkowym.DataAccess.Context;
+using zCzosnkowym.DataAccess.Interfaces;
+using zCzosnkowym.DataAccess.Repositories;
+using AutoMapper;
 
 namespace zCzosnkowym.Api
 {
@@ -29,9 +32,12 @@ namespace zCzosnkowym.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddTransient<IRestaurantRepository, RestaurantRepository>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddDbContext<RestaurantContext>(options =>
+            services.AddTransient<IRestaurantRepository, RestaurantRepository>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
+
+            services.AddDbContext<OrderFoodContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("zCzosnkowym")));
         }
 

@@ -6,7 +6,7 @@ namespace zCzosnkowym.Core
     public class Order
     {
         public int Id { get; set; }
-        public OrderState State { get; set; }
+        public int State { get; set; }
         public string Name { get; set; }
         public DateTime OrderingDate { get; set; }
         public Person Purchaser { get; set; }

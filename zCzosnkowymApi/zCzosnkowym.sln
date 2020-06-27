@@ -3,23 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "zCzosnkowym.Core.Tests", "zCzosnkowym.Core.Tests\zCzosnkowym.Core.Tests.csproj", "{0473FCCD-80F2-4444-8D6B-84508B09C80B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "zCzosnkowym.Api", "zCzosnkowym.Api\zCzosnkowym.Api.csproj", "{05CD6DB3-BC13-426A-9170-CA9A56E0BA5E}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{EBA84CA1-CD2A-4111-B940-1104FC6DEFFE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{459A10AC-D4CD-4ADE-8254-BB46F4223CAB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{797DFEF6-443F-4343-914E-1A034DE6D984}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zCzosnkowym.Api.Tests", "zCzosnkowym.Api.Tests\zCzosnkowym.Api.Tests.csproj", "{433E6EC0-3401-4B05-BEBA-ED9F2CA17DD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "zCzosnkowym.Api.Tests", "zCzosnkowym.Api.Tests\zCzosnkowym.Api.Tests.csproj", "{433E6EC0-3401-4B05-BEBA-ED9F2CA17DD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zCzosnkowym.DataAccess.Tests", "zCzosnkowym.DataAccess.Tests\zCzosnkowym.DataAccess.Tests.csproj", "{353C27A8-8451-404B-AF86-BEF208FE9F88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "zCzosnkowym.DataAccess.Tests", "zCzosnkowym.DataAccess.Tests\zCzosnkowym.DataAccess.Tests.csproj", "{353C27A8-8451-404B-AF86-BEF208FE9F88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zCzosnkowym.DataAccess", "zCzosnkowym.DataAccess\zCzosnkowym.DataAccess.csproj", "{F4A468EB-E46C-4CCD-8FD8-AF3C537C20E4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zCzosnkowym.Core", "zCzosnkowym.Core\zCzosnkowym.Core.csproj", "{39FCAC0F-D70F-4032-9445-85C7AD1A2B46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "zCzosnkowym.DataAccess", "zCzosnkowym.DataAccess\zCzosnkowym.DataAccess.csproj", "{F4A468EB-E46C-4CCD-8FD8-AF3C537C20E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0473FCCD-80F2-4444-8D6B-84508B09C80B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0473FCCD-80F2-4444-8D6B-84508B09C80B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0473FCCD-80F2-4444-8D6B-84508B09C80B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0473FCCD-80F2-4444-8D6B-84508B09C80B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{05CD6DB3-BC13-426A-9170-CA9A56E0BA5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{05CD6DB3-BC13-426A-9170-CA9A56E0BA5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05CD6DB3-BC13-426A-9170-CA9A56E0BA5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,21 +37,15 @@ Global
 		{F4A468EB-E46C-4CCD-8FD8-AF3C537C20E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4A468EB-E46C-4CCD-8FD8-AF3C537C20E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4A468EB-E46C-4CCD-8FD8-AF3C537C20E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39FCAC0F-D70F-4032-9445-85C7AD1A2B46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39FCAC0F-D70F-4032-9445-85C7AD1A2B46}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39FCAC0F-D70F-4032-9445-85C7AD1A2B46}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39FCAC0F-D70F-4032-9445-85C7AD1A2B46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{0473FCCD-80F2-4444-8D6B-84508B09C80B} = {EBA84CA1-CD2A-4111-B940-1104FC6DEFFE}
 		{05CD6DB3-BC13-426A-9170-CA9A56E0BA5E} = {797DFEF6-443F-4343-914E-1A034DE6D984}
 		{433E6EC0-3401-4B05-BEBA-ED9F2CA17DD6} = {797DFEF6-443F-4343-914E-1A034DE6D984}
 		{353C27A8-8451-404B-AF86-BEF208FE9F88} = {459A10AC-D4CD-4ADE-8254-BB46F4223CAB}
 		{F4A468EB-E46C-4CCD-8FD8-AF3C537C20E4} = {459A10AC-D4CD-4ADE-8254-BB46F4223CAB}
-		{39FCAC0F-D70F-4032-9445-85C7AD1A2B46} = {EBA84CA1-CD2A-4111-B940-1104FC6DEFFE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BB434F51-B6AF-4FFB-86CF-69C9C4CF1619}

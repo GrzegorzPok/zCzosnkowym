@@ -3,7 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
-using zCzosnkowym.Core;
+using zCzosnkowym.DataAccess.Context;
+using zCzosnkowym.DataAccess.Entities;
 
 namespace zCzosnkowym.DataAccess
 {
@@ -13,7 +14,7 @@ namespace zCzosnkowym.DataAccess
         public async void ShouldGetAllRestaurants()
         {
 
-            var options = new DbContextOptionsBuilder<RestaurantContext>().UseInMemoryDatabase(databaseName: "ShouldGetAllRestaurants").Options;
+            var options = new DbContextOptionsBuilder<OrderFoodContext>().UseInMemoryDatabase(databaseName: "ShouldGetAllRestaurants").Options;
 
             var sortedList = new List<Restaurant>()
             {
@@ -23,7 +24,7 @@ namespace zCzosnkowym.DataAccess
             };
 
 
-            using (var context = new RestaurantContext(options))
+            using (var context = new OrderFoodContext(options))
             {
                 foreach (var game in sortedList)
                 {
@@ -34,7 +35,7 @@ namespace zCzosnkowym.DataAccess
 
             // Act
             IEnumerable<Restaurant> actualList;
-            using (var context = new RestaurantContext(options))
+            using (var context = new OrderFoodContext(options))
             {
                 var repository = new RestaurantRepository(context);
                 actualList = await repository.GetAll();

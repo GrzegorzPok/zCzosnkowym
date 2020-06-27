@@ -1,24 +1,25 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using zCzosnkowym.Core;
-using zCzosnkowym.Core.Interfaces;
+using zCzosnkowym.DataAccess.Context;
+using zCzosnkowym.DataAccess.Entities;
+using zCzosnkowym.DataAccess.Interfaces;
+using System.Linq;
+using System.Collections.Generic;
+using System;
 
 namespace zCzosnkowym.DataAccess
 {
     public class RestaurantRepository: IRestaurantRepository
     {
-        private RestaurantContext _context;
+        private OrderFoodContext _context;
 
-        public RestaurantRepository(RestaurantContext context)
+        public RestaurantRepository(OrderFoodContext context)
         {
-            this._context = context;
+            this._context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         public async Task<IEnumerable<Restaurant>> GetAll()
-        {
-            _context.Database.EnsureCreated();
+        {        
             return await _context.Restaurants.ToListAsync();
         }
 

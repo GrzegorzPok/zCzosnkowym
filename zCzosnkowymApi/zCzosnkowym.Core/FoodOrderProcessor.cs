@@ -22,7 +22,7 @@ namespace zCzosnkowym.Core
             }
 
             var newOrder = new Order();
-            newOrder.State = OrderState.New;
+           // newOrder.State = OrderState.New;
             newOrder.Name = parameters.Name;
             newOrder.OrderingDate = parameters.OrderingDate;
             newOrder.Purchaser = parameters.OrderOwner;

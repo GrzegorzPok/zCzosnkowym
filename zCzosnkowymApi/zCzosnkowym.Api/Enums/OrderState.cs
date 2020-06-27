@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace zCzosnkowym.Core
+namespace zCzosnkowym.Api.Enums
 {
     public enum OrderState
     {
