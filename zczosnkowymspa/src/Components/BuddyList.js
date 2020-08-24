@@ -18,9 +18,9 @@ export default class BuddyList extends Component {
 
     render() {
         return (
-            <div>
+            <div className="w-50 mx-auto">
                 <h1>Buddys list</h1>
-                <ul className="list-group">
+                <ul className="list-group ">
                     {this.state.buddys.map(buddy=>
                         (
                             <Buddy key={buddy.id} number = {buddy.id} name = {buddy.buddyName}/>
